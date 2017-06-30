@@ -6,18 +6,20 @@ class PagesController < ApplicationController
     @answer = params[:text]
     @coach_answer = coach_answer(@answer)
   end
-end
+  
+  private
 
-
-def coach_answer(answer)
-  if answer.include?("?")
-    return "Silly question, get dressed and go to work!"
-  elsif answer == "I am going to work right now!"
-    return ""
-  else
-    return "I don't care, get dressed and go to work!"
+  def coach_answer(answer)
+    if answer.include?("?")
+      return "Silly question, get dressed and go to work!"
+    elsif answer == "I am going to work right now!"
+      return ""
+    else
+      return "I don't care, get dressed and go to work!"
+    end
   end
 end
+
 
 # def coach_answer_enhanced(your_message)
 #   if your_message.include?("?")
