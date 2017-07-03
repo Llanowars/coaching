@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'coaching/answer'
+
+  get 'coaching/ask'
+
   root to: 'pages#coach'
   get 'coach', to: 'pages#coach'
   get 'answer', to: 'pages#answer'
