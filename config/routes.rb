@@ -1,12 +1,9 @@
 Rails.application.routes.draw do
 
-  get 'coaching/answer'
-
-  get 'coaching/ask'
-
-  root to: 'pages#coach'
-  get 'coach', to: 'pages#coach'
-  get 'answer', to: 'pages#answer'
+  root to: 'coaching#ask'
+  
+  get 'ask', to: 'coaching#ask'
+  get 'answer', to: 'coaching#answer'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
